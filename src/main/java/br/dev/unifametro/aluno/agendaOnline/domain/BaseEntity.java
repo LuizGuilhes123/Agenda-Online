@@ -3,18 +3,20 @@ package br.dev.unifametro.aluno.agendaOnline.domain;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.io.Serializable;
 import java.util.UUID;
 
 @MappedSuperclass
 @Getter
 @Setter
-public class BaseEntity {
+public class BaseEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column( name = "table_id", nullable = false,  updatable = false, unique = true)
     private  Long id;
 
-    @Column( name = "external_idd", nullable = false, updatable = false, unique = true)
+    @Column( name = "external_id", nullable = false, updatable = false, unique = true)
     private UUID externalID;
 }

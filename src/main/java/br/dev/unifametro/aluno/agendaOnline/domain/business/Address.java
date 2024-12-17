@@ -1,7 +1,6 @@
 package br.dev.unifametro.aluno.agendaOnline.domain.business;
 
 import br.dev.unifametro.aluno.agendaOnline.domain.BaseEntity;
-import br.dev.unifametro.aluno.agendaOnline.domain.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 @EqualsAndHashCode(callSuper = true)
-@Table(name = "address")
+@Table(name = "addresses")
 public class Address extends BaseEntity {
 
     @Column(name = "street", nullable = false)
